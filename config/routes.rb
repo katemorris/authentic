@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   root to: 'welcome#index'
   get '/repos', to: 'welcome#show', as: 'repos'
+  get '/return', to: 'welcome#authorize', as: 'auth'
 end

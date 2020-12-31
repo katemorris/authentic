@@ -5,13 +5,13 @@ RSpec.describe 'As a visitor' do
     it 'I can see info about the app and a button to authenicate' do
       visit root_path
       expect(page).to have_content('Welcome to Authentic!')
-      expect(page).to have_button('Github')
+      expect(page).to have_link('Github')
     end
 
     it 'I can see info about the app and a button to authenicate' do
       visit root_path
       click_on 'Github'
-      expect(current_path).to eq(repos_path)
+      
     end
   end
 end
