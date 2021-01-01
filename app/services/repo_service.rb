@@ -1,6 +1,6 @@
 class RepoService
   def self.repos(type, user)
-    response = conn(user).get("/users/#{user.username}/repos?type=#{type}")
+    response = conn(user).get("/user/repos?type=#{type}")
     JSON.parse(response.body, symbolize_names: true)
   end
 
