@@ -1,4 +1,13 @@
 <h1>Welcome, <%= current_user.username %></h1>
 <h2>Public Repos</h2>
-
+  <ul>
+    <% @public_repos.each do |repo| %>
+      <li><%= link_to repo.name, repo.html_url %></li>
+    <% end %>
+  </ul>
 <h2>Private Repos</h2>
+<ul>
+  <% @private_repos.each do |repo| %>
+    <li><%= link_to repo.name, repo.html_url %></li>
+  <% end %>
+</ul>

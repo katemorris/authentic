@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   root to: 'welcome#index'
   get '/repos', to: 'welcome#show', as: 'repos'
-  get '/return', to: 'welcome#create', as: 'auth'
+  get '/auth/github/callback', to: 'welcome#create'
+  delete '/logout', to: 'welcome#destroy'
 end
